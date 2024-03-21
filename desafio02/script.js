@@ -33,8 +33,8 @@ buttons.forEach((button) => {
 
 verificar.addEventListener("click", (event) => {
   answers.sort(function (a, b) {
-    const questionA = Number(a[0]);
-    const questionB = Number(b[0]);
+    const questionA = Number(a.slice(1, -1)[0]);
+    const questionB = Number(b.slice(1, -1)[0]);
 
     if (questionA < questionB) {
       return -1;
@@ -44,10 +44,11 @@ verificar.addEventListener("click", (event) => {
     }
   });
 
+  console.log(answers);
+
   correct_answers.forEach((corA, i) => {
     if (corA === answers[i]) {
       amount_correct += 1;
-      c;
     }
   });
 
