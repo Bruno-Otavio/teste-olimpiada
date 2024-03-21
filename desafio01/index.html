@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fila do Recreio</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Fila do Recreio</h1>
+    <form id="registro-pessoa">
+      <div>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required />
+      </div>
+      <div>
+        <label for="idade">Idade:</label>
+        <input type="number" name="cpf" id="idade" required />
+      </div>
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <section>
+      <div class="buttons">
+        <button id="preencher">Preencher com dados automaticamente</button>
+        <div>
+          <button onclick="sortByCPF()">Organizar por CPF</button>
+          <button onclick="sortByNome()">Organizar por Nome</button>
+        </div>
+      </div>
+
+      <h2>Resultados</h2>
+      <div id="show-pessoas"></div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
